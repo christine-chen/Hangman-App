@@ -10,13 +10,17 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    @IBOutlet var hangmanImageView: UIImageView!
     @IBOutlet var wordToGuessLabel: UILabel!
+    @IBOutlet var incorrectLettersLabel: UILabel!
+    @IBOutlet var hangmanImageView: UIImageView!
+    @IBOutlet var topStackView: UIStackView!
+    @IBOutlet var middleStackView: UIStackView!
+    @IBOutlet var bottomStackView: UIStackView!
     
     var numberOfWrongGuesses = 0
     var phraseArray = [Character]()
     var correctGuessArray = [Character]()
-    var dashesAndSpaces = String()
+    var incorrectLettersArray = [Character]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,16 +29,34 @@ class GameViewController: UIViewController {
         let hangmanPhrases = HangmanPhrases()
         let phrase = hangmanPhrases.getRandomPhrase()
         
+        numberOfWrongGuesses = 0
+        phraseArray.removeAll()
+        correctGuessArray.removeAll()
+        incorrectLettersArray.removeAll()
+        incorrectLettersLabel.text = ""
+        
+        for t in topStackView.subviews {
+            t.alpha = 1
+        }
+        for m in middleStackView.subviews {
+            m.alpha = 1
+        }
+        for b in bottomStackView.subviews {
+            b.alpha = 1
+        }
+        
         hangmanImageView.image = UIImage(named: "hangman1.gif")
         
         for letter in phrase.characters {
             phraseArray.append(letter)
             if (letter == " ") {
-                dashesAndSpaces += " "
+                correctGuessArray.append(" ")
+            } else {
+                correctGuessArray.append("-")
             }
-            dashesAndSpaces += "-"
         }
-        wordToGuessLabel.text = dashesAndSpaces
+        
+        wordToGuessLabel.text = String(correctGuessArray)
         print(phrase)
     }
 
@@ -43,17 +65,41 @@ class GameViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func letterGuess(button: UIButton?) {
+    @IBAction func letterGuess(sender: UIButton) {
         var counter = 0
+        sender.alpha = 0
+        print(sender.titleLabel!.text)
         while phraseArray.count > counter {
-            if String(phraseArray[counter]) == button!.titleLabel!.text {
+            if String(phraseArray[counter]) == sender.titleLabel!.text {
                 correctGuessArray[counter] = phraseArray[counter]
+                wordToGuessLabel.text = String(correctGuessArray)
+            }
+            if !correctGuessArray.contains("-") && numberOfWrongGuesses < 6 {
+                let alertWin = UIAlertController(title: "You Win!",message: "Congratulations!",preferredStyle: .Alert)
+                alertWin.addAction(UIAlertAction(title: "New Game", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alertWin, animated: true, completion: nil)
+                return refreshView()
             }
             counter += 1
         }
+        if !phraseArray.contains(Character(sender.titleLabel!.text!)) && !incorrectLettersArray.contains(Character(sender.titleLabel!.text!)) {
+            numberOfWrongGuesses += 1
+            incorrectLettersArray.append(Character(sender.titleLabel!.text!))
+            incorrectLettersArray.append(",")
+            incorrectLettersArray.append(" ")
+            incorrectLettersLabel.text = String(incorrectLettersArray)
+        }
+        changeHangmanImageView()
+
+        if numberOfWrongGuesses > 6 {
+            let alertLose = UIAlertController(title: "You Lose!",message: "Better luck next time.",preferredStyle: .Alert)
+            alertLose.addAction(UIAlertAction(title: "Play Again?", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alertLose, animated: true, completion: nil)
+            return refreshView()
+        }
     }
-    
-    func hangmanImage() {
+
+    func changeHangmanImageView() {
         if numberOfWrongGuesses == 1 {
             hangmanImageView.image = UIImage(named: "hangman2.gif")
         } else if numberOfWrongGuesses == 2 {
@@ -64,9 +110,16 @@ class GameViewController: UIViewController {
             hangmanImageView.image = UIImage(named: "hangman5.gif")
         } else if numberOfWrongGuesses == 5 {
             hangmanImageView.image = UIImage(named: "hangman6.gif")
-        } else {
+        } else if numberOfWrongGuesses == 6 {
             hangmanImageView.image = UIImage(named: "hangman7.gif")
         }
+    }
+    
+    func refreshView() ->() {
+        
+        // Calling the viewDidLoad and viewWillAppear methods to "refresh" the VC and run through the code within the methods themselves
+        self.viewDidLoad()
+        
     }
     
     /*
