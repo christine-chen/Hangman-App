@@ -65,6 +65,10 @@ class GameViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func startOver(sender: UIButton) {
+        self.viewDidLoad()
+    }
+    
     @IBAction func letterGuess(sender: UIButton) {
         var counter = 0
         sender.alpha = 0
@@ -76,9 +80,8 @@ class GameViewController: UIViewController {
             }
             if !correctGuessArray.contains("-") && numberOfWrongGuesses < 6 {
                 let alertWin = UIAlertController(title: "You Win!",message: "Congratulations!",preferredStyle: .Alert)
-                alertWin.addAction(UIAlertAction(title: "New Game", style: UIAlertActionStyle.Default, handler: nil))
+                alertWin.addAction(UIAlertAction(title: "New Game", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) in self.refreshView()}))
                 self.presentViewController(alertWin, animated: true, completion: nil)
-                return refreshView()
             }
             counter += 1
         }
@@ -87,15 +90,14 @@ class GameViewController: UIViewController {
             incorrectLettersArray.append(Character(sender.titleLabel!.text!))
             incorrectLettersArray.append(",")
             incorrectLettersArray.append(" ")
-            incorrectLettersLabel.text = String(incorrectLettersArray)
+            incorrectLettersLabel.text = "Incorrect Letters: " + String(incorrectLettersArray)
         }
         changeHangmanImageView()
 
-        if numberOfWrongGuesses > 6 {
+        if hangmanImageView.image == UIImage(named: "hangman7.gif") {
             let alertLose = UIAlertController(title: "You Lose!",message: "Better luck next time.",preferredStyle: .Alert)
-            alertLose.addAction(UIAlertAction(title: "Play Again?", style: UIAlertActionStyle.Default, handler: nil))
+            alertLose.addAction(UIAlertAction(title: "Play Again?", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) in self.refreshView()}))
             self.presentViewController(alertLose, animated: true, completion: nil)
-            return refreshView()
         }
     }
 
