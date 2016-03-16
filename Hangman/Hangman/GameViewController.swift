@@ -45,7 +45,7 @@ class GameViewController: UIViewController {
             b.alpha = 1
         }
         
-        hangmanImageView.image = UIImage(named: "hangman1.gif")
+        hangmanImageView.image = UIImage(named: "noCrane.jpg")
         
         for letter in phrase.characters {
             phraseArray.append(letter)
@@ -57,7 +57,7 @@ class GameViewController: UIViewController {
         }
         
         wordToGuessLabel.text = String(correctGuessArray)
-        print(phrase)
+//        print(phrase)
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,7 +72,7 @@ class GameViewController: UIViewController {
     @IBAction func letterGuess(sender: UIButton) {
         var counter = 0
         sender.alpha = 0
-        print(sender.titleLabel!.text)
+//        print(sender.titleLabel!.text)
         while phraseArray.count > counter {
             if String(phraseArray[counter]) == sender.titleLabel!.text {
                 correctGuessArray[counter] = phraseArray[counter]
@@ -94,7 +94,7 @@ class GameViewController: UIViewController {
         }
         changeHangmanImageView()
 
-        if hangmanImageView.image == UIImage(named: "hangman7.gif") {
+        if hangmanImageView.image == UIImage(named: "completedCrane.jpg") {
             let alertLose = UIAlertController(title: "You Lose!",message: "Better luck next time.",preferredStyle: .Alert)
             alertLose.addAction(UIAlertAction(title: "Play Again?", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) in self.refreshView()}))
             self.presentViewController(alertLose, animated: true, completion: nil)
@@ -103,17 +103,17 @@ class GameViewController: UIViewController {
 
     func changeHangmanImageView() {
         if numberOfWrongGuesses == 1 {
-            hangmanImageView.image = UIImage(named: "hangman2.gif")
+            hangmanImageView.image = UIImage(named: "bodyCrane.jpg")
         } else if numberOfWrongGuesses == 2 {
-            hangmanImageView.image = UIImage(named: "hangman3.gif")
+            hangmanImageView.image = UIImage(named: "missingHLRWingCrane.jpg")
         } else if numberOfWrongGuesses == 3 {
-            hangmanImageView.image = UIImage(named: "hangman4.gif")
+            hangmanImageView.image = UIImage(named: "missingLRWingCrane.jpg")
         } else if numberOfWrongGuesses == 4 {
-            hangmanImageView.image = UIImage(named: "hangman5.gif")
+            hangmanImageView.image = UIImage(named: "missingRWingCrane.jpg")
         } else if numberOfWrongGuesses == 5 {
-            hangmanImageView.image = UIImage(named: "hangman6.gif")
+            hangmanImageView.image = UIImage(named: "missingTailCrane.jpg")
         } else if numberOfWrongGuesses == 6 {
-            hangmanImageView.image = UIImage(named: "hangman7.gif")
+            hangmanImageView.image = UIImage(named: "completedCrane.jpg")
         }
     }
     
