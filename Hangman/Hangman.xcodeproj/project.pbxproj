@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		453845F91C99366900AC2DFA /* bodyCrane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 453845F21C99366900AC2DFA /* bodyCrane.jpg */; };
-		453845FB1C99366900AC2DFA /* missingHLRWingCrane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 453845F41C99366900AC2DFA /* missingHLRWingCrane.jpg */; };
-		453845FC1C99366900AC2DFA /* missingLRWingCrane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 453845F51C99366900AC2DFA /* missingLRWingCrane.jpg */; };
-		453845FD1C99366900AC2DFA /* missingRWingCrane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 453845F61C99366900AC2DFA /* missingRWingCrane.jpg */; };
-		453845FE1C99366900AC2DFA /* missingTailCrane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 453845F71C99366900AC2DFA /* missingTailCrane.jpg */; };
-		453845FF1C99366900AC2DFA /* noCrane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 453845F81C99366900AC2DFA /* noCrane.jpg */; };
-		453846011C993F3D00AC2DFA /* completedCrane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 453846001C993F3D00AC2DFA /* completedCrane.jpg */; };
+		4509F01C1C994FDC00C5854C /* bodyCrane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4509F0141C994FDC00C5854C /* bodyCrane.jpg */; };
+		4509F01D1C994FDC00C5854C /* completedCrane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4509F0151C994FDC00C5854C /* completedCrane.jpg */; };
+		4509F01E1C994FDC00C5854C /* missingHLRWingCrane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4509F0161C994FDC00C5854C /* missingHLRWingCrane.jpg */; };
+		4509F01F1C994FDC00C5854C /* missingLRWingCrane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4509F0171C994FDC00C5854C /* missingLRWingCrane.jpg */; };
+		4509F0201C994FDC00C5854C /* missingRWingCrane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4509F0181C994FDC00C5854C /* missingRWingCrane.jpg */; };
+		4509F0221C994FDC00C5854C /* missingTailCrane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4509F01A1C994FDC00C5854C /* missingTailCrane.jpg */; };
+		4509F0231C994FDC00C5854C /* noCrane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4509F01B1C994FDC00C5854C /* noCrane.jpg */; };
 		ECC22F431C89177600749E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC22F421C89177600749E58 /* AppDelegate.swift */; };
 		ECC22F481C89177600749E58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC22F461C89177600749E58 /* Main.storyboard */; };
 		ECC22F4A1C89177600749E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC22F491C89177600749E58 /* Assets.xcassets */; };
@@ -44,13 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		453845F21C99366900AC2DFA /* bodyCrane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bodyCrane.jpg; path = "basic-hangman-img/bodyCrane.jpg"; sourceTree = "<group>"; };
-		453845F41C99366900AC2DFA /* missingHLRWingCrane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = missingHLRWingCrane.jpg; path = "basic-hangman-img/missingHLRWingCrane.jpg"; sourceTree = "<group>"; };
-		453845F51C99366900AC2DFA /* missingLRWingCrane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = missingLRWingCrane.jpg; path = "basic-hangman-img/missingLRWingCrane.jpg"; sourceTree = "<group>"; };
-		453845F61C99366900AC2DFA /* missingRWingCrane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = missingRWingCrane.jpg; path = "basic-hangman-img/missingRWingCrane.jpg"; sourceTree = "<group>"; };
-		453845F71C99366900AC2DFA /* missingTailCrane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = missingTailCrane.jpg; path = "basic-hangman-img/missingTailCrane.jpg"; sourceTree = "<group>"; };
-		453845F81C99366900AC2DFA /* noCrane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = noCrane.jpg; path = "basic-hangman-img/noCrane.jpg"; sourceTree = "<group>"; };
-		453846001C993F3D00AC2DFA /* completedCrane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = completedCrane.jpg; path = "basic-hangman-img/completedCrane.jpg"; sourceTree = "<group>"; };
+		4509F0141C994FDC00C5854C /* bodyCrane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bodyCrane.jpg; path = "basic-hangman-img/bodyCrane.jpg"; sourceTree = "<group>"; };
+		4509F0151C994FDC00C5854C /* completedCrane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = completedCrane.jpg; path = "basic-hangman-img/completedCrane.jpg"; sourceTree = "<group>"; };
+		4509F0161C994FDC00C5854C /* missingHLRWingCrane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = missingHLRWingCrane.jpg; path = "basic-hangman-img/missingHLRWingCrane.jpg"; sourceTree = "<group>"; };
+		4509F0171C994FDC00C5854C /* missingLRWingCrane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = missingLRWingCrane.jpg; path = "basic-hangman-img/missingLRWingCrane.jpg"; sourceTree = "<group>"; };
+		4509F0181C994FDC00C5854C /* missingRWingCrane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = missingRWingCrane.jpg; path = "basic-hangman-img/missingRWingCrane.jpg"; sourceTree = "<group>"; };
+		4509F01A1C994FDC00C5854C /* missingTailCrane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = missingTailCrane.jpg; path = "basic-hangman-img/missingTailCrane.jpg"; sourceTree = "<group>"; };
+		4509F01B1C994FDC00C5854C /* noCrane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = noCrane.jpg; path = "basic-hangman-img/noCrane.jpg"; sourceTree = "<group>"; };
 		ECC22F3F1C89177600749E58 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC22F421C89177600749E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC22F471C89177600749E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,13 +97,13 @@
 		EC9310531C891F3400BE736C /* basic-hangman-img */ = {
 			isa = PBXGroup;
 			children = (
-				453845F21C99366900AC2DFA /* bodyCrane.jpg */,
-				453845F41C99366900AC2DFA /* missingHLRWingCrane.jpg */,
-				453845F51C99366900AC2DFA /* missingLRWingCrane.jpg */,
-				453845F61C99366900AC2DFA /* missingRWingCrane.jpg */,
-				453845F71C99366900AC2DFA /* missingTailCrane.jpg */,
-				453845F81C99366900AC2DFA /* noCrane.jpg */,
-				453846001C993F3D00AC2DFA /* completedCrane.jpg */,
+				4509F0141C994FDC00C5854C /* bodyCrane.jpg */,
+				4509F0151C994FDC00C5854C /* completedCrane.jpg */,
+				4509F0161C994FDC00C5854C /* missingHLRWingCrane.jpg */,
+				4509F0171C994FDC00C5854C /* missingLRWingCrane.jpg */,
+				4509F0181C994FDC00C5854C /* missingRWingCrane.jpg */,
+				4509F01A1C994FDC00C5854C /* missingTailCrane.jpg */,
+				4509F01B1C994FDC00C5854C /* noCrane.jpg */,
 			);
 			name = "basic-hangman-img";
 			sourceTree = "<group>";
@@ -292,16 +292,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECC22F7C1C891A6700749E58 /* phrases.plist in Resources */,
-				453845F91C99366900AC2DFA /* bodyCrane.jpg in Resources */,
-				453845FE1C99366900AC2DFA /* missingTailCrane.jpg in Resources */,
+				4509F01C1C994FDC00C5854C /* bodyCrane.jpg in Resources */,
 				ECC22F4D1C89177600749E58 /* LaunchScreen.storyboard in Resources */,
-				453845FC1C99366900AC2DFA /* missingLRWingCrane.jpg in Resources */,
-				453845FB1C99366900AC2DFA /* missingHLRWingCrane.jpg in Resources */,
-				453845FF1C99366900AC2DFA /* noCrane.jpg in Resources */,
+				4509F01F1C994FDC00C5854C /* missingLRWingCrane.jpg in Resources */,
+				4509F01E1C994FDC00C5854C /* missingHLRWingCrane.jpg in Resources */,
+				4509F0221C994FDC00C5854C /* missingTailCrane.jpg in Resources */,
+				4509F01D1C994FDC00C5854C /* completedCrane.jpg in Resources */,
+				4509F0231C994FDC00C5854C /* noCrane.jpg in Resources */,
 				ECC22F4A1C89177600749E58 /* Assets.xcassets in Resources */,
 				ECC22F481C89177600749E58 /* Main.storyboard in Resources */,
-				453845FD1C99366900AC2DFA /* missingRWingCrane.jpg in Resources */,
-				453846011C993F3D00AC2DFA /* completedCrane.jpg in Resources */,
+				4509F0201C994FDC00C5854C /* missingRWingCrane.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

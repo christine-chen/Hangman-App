@@ -33,7 +33,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOI-Ue-Bcf">
                                         <rect key="frame" x="30" y="0.0" width="30" height="30"/>
                                         <state key="normal" title="B">
-                                            <color key="titleColor" red="0.79607843140000001" green="0.29803921570000003" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.86274509799999999" green="0.1960784314" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="letterGuess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WI1-B8-0Hn"/>
