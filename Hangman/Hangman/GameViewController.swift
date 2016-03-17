@@ -97,7 +97,7 @@ class GameViewController: UIViewController {
         changeHangmanImageView()
 
         if hangmanImageView.image == UIImage(named: "completedCrane.jpg") {
-            let alertLose = UIAlertController(title: "You Lose!",message: "The phrase was " + theWord + ".\n Better luck next time.",preferredStyle: .Alert)
+            let alertLose = UIAlertController(title: "You Lose!",message: "The phrase was " + theWord + ".",preferredStyle: .Alert)
             alertLose.addAction(UIAlertAction(title: "Play Again?", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) in self.refreshView()}))
             self.presentViewController(alertLose, animated: true, completion: nil)
         }
