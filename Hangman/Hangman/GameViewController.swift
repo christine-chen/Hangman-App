@@ -21,6 +21,7 @@ class GameViewController: UIViewController {
     var phraseArray = [Character]()
     var correctGuessArray = [Character]()
     var incorrectLettersArray = [Character]()
+    var theWord = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class GameViewController: UIViewController {
         correctGuessArray.removeAll()
         incorrectLettersArray.removeAll()
         incorrectLettersLabel.text = ""
+        theWord = phrase
         
         for t in topStackView.subviews {
             t.alpha = 1
@@ -95,7 +97,7 @@ class GameViewController: UIViewController {
         changeHangmanImageView()
 
         if hangmanImageView.image == UIImage(named: "completedCrane.jpg") {
-            let alertLose = UIAlertController(title: "You Lose!",message: "Better luck next time.",preferredStyle: .Alert)
+            let alertLose = UIAlertController(title: "You Lose!",message: "The phrase was " + theWord + ".\n Better luck next time.",preferredStyle: .Alert)
             alertLose.addAction(UIAlertAction(title: "Play Again?", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) in self.refreshView()}))
             self.presentViewController(alertLose, animated: true, completion: nil)
         }
